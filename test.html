@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1" media="(device-height: 568px)" />
     <!-- Bootstrap -->
-    <link href="css/bootstrap.css" rel="stylesheet">
     <link href="test.css" rel="stylesheet">
     <!-- Font Awesome Icons -->
     <script src="https://use.fontawesome.com/3302e728e9.js"></script>
@@ -70,6 +69,10 @@
         </div>
     </header>
     <div class="content">
+
+
+
+
 
         <!-- Winner's Club -->
         <section class="page-heading">
@@ -138,6 +141,11 @@
                                 <div class="ball ball35">35</div>
                                 <div class="ball ball36">36</div>
                             </div>
+
+
+
+
+
 
                             <div class="random-number-picker">
                                 <div class="number number1">
@@ -337,10 +345,14 @@
                                 </div>
                             </div>
 
+
+
                             <button onclick="picknumber();">Quick Pick</button>
                             <button onclick="clearnumber();">Clear All</button>
 
                         </div>
+
+
 
                     </div>
                     <div class="col-md-4">
@@ -410,6 +422,12 @@
         </section>
         <!-- Content Ends Here -->
 
+
+
+
+
+
+
         <footer>
             <div class="container">
                 <div class="col-group">
@@ -476,14 +494,20 @@
     </div>
     <script src="app.js"></script>
 
+
+
+
+
+
     <script>
+
         $(".game-panel .ball").click(function(){
             if($(this).hasClass("selected")){
                 $(this).removeClass("selected");
                 bstr=$(this).attr("class");
                 bstr=bstr.substr("9",bstr.length);
                 numberarray.splice(numberarray.indexOf(bstr),1);
-                console.log("Thang int="+ parseInt(numberarray[n]));
+                //console.log("int="+ parseInt(numberarray[n]));
                 for(n=0; n<5; n++){
                     if(numberarray[n]==undefined){
                         $(".random-number-picker .number"+(n+1)+" .num1").css({"marginTop":"0px"});
@@ -502,9 +526,6 @@
 
             }
         });
-
-        setInterval(function(){
-        }, 3000);
 
         var sn1="";
         var sn2="";
@@ -548,7 +569,6 @@
 
             }
         }
-
         function clearnumber(){
             n1="";
             n2="";
@@ -581,8 +601,10 @@
             if(n5<10){ n5="0"+n5; }
 
             numberarray=[parseInt(n1),parseInt(n2),parseInt(n3),parseInt(n4),parseInt(n5)];
+
             shownumber();
         }
+
 
         function shownumber(){
             console.log(numberarray.length + " / " + numberarray);
